@@ -15,8 +15,13 @@ app.use(express.json());
 
 
 app.use("/api/auth", require("./routes/auth"));
+app.use("/api/admin", require("./routes/admin"));
+app.use("/api/team", require("./routes/team"));
+app.use("/api/leaderboard", require("./routes/leaderboard"));
+app.use("/api/contest", require("./routes/contest"));
 
-// ✅ Test Route
+
+
 app.get("/", (req, res) => {
   res.send("Fantasy Cricket API Running 🚀");
 });
