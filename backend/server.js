@@ -19,7 +19,7 @@ app.use("/api/admin", require("./routes/admin"));
 app.use("/api/team", require("./routes/team"));
 app.use("/api/leaderboard", require("./routes/leaderboard"));
 app.use("/api/contest", require("./routes/contest"));
-
+app.use("/api/match", require("./routes/match"));
 
 
 app.get("/", (req, res) => {

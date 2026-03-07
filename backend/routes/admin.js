@@ -27,6 +27,20 @@ router.post("/add-player", async (req, res) => {
     res.status(500).json({ message: "Error adding player" });
   }
 });
+// ===============================
+// GET ALL PLAYERS
+// ===============================
+router.get("/players", async (req, res) => {
+  try {
+
+    const players = await Player.find();
+
+    res.json(players);
+
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching players" });
+  }
+});
 
 
 // ===============================
